@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+
+  consul:
+    image: consul:latest
+    command: consul agent -dev -log-level=warn -ui -client=0.0.0.0
+    hostname: consul
+    container_name: consul
+  
+  samplemicroservice.gateway:
+    image: ${DOCKER_REGISTRY-}samplemicroservicegateway
+    build:
+      context: .
+      dockerfile: SampleMicroService.GateWay/Dockerfile
+    container_name: samplemicroservice.gateway
+
+  samplemicroservice.orderservice:
+    image: ${DOCKER_REGISTRY-}samplemicroserviceorderservice
+    build:
+      context: .
+      dockerfile: SampleMicroService.OrderService/Dockerfile
+    container_name: samplemicroservice.orderservice
+
+
+  samplemicroservice.productservice:
+    image: ${DOCKER_REGISTRY-}samplemicroserviceproductservice
+    build:
+      context: .
+      dockerfile: SampleMicroService.ProductService/Dockerfile
+    container_name: samplemicroservice.productservice
+

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Ocelot.Provider.Consul;
 using System.IO;
 
 namespace SampleMicroService.GateWay
@@ -33,7 +34,7 @@ namespace SampleMicroService.GateWay
                 .ConfigureServices((context, services) =>
                 {
 
-                    services.AddOcelot();
+                    services.AddOcelot().AddConsul();
                 })
                 .ConfigureLogging((hostingContext, logging) =>
                 {

@@ -1,0 +1,44 @@
+version: '3.4'
+
+services:
+
+  consul:
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
+
+  samplemicroservice.gateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80:80"
+
+  samplemicroservice.orderservice:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ServiceConfig__serviceDiscoveryAddress=http://consul:8500
+      - ServiceConfig__serviceName=samplemicroservice.orderservice
+      - ServiceConfig__serviceId=1
+      - ServiceConfig__serviceAddress=http://samplemicroservice.orderservice:80
+      - ServiceConfig__tcpCheckTimeOutAsMin=1
+      - ServiceConfig__tcpCheckIntervalAsSec=30
+      - ServiceConfig__healtCheckTimeOutAsMin=1
+      - ServiceConfig__healtCheckIntervalAsSec=30
+    ports:
+      - "80"
+
+
+  samplemicroservice.productservice:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ServiceConfig__serviceDiscoveryAddress=http://consul:8500
+      - ServiceConfig__serviceName=samplemicroservice.productservice
+      - ServiceConfig__serviceId=1
+      - ServiceConfig__serviceAddress=http://samplemicroservice.productservice:80
+      - ServiceConfig__tcpCheckTimeOutAsMin=1
+      - ServiceConfig__tcpCheckIntervalAsSec=30
+      - ServiceConfig__healtCheckTimeOutAsMin=1
+      - ServiceConfig__healtCheckIntervalAsSec=30
+    ports:
+      - "80"
+

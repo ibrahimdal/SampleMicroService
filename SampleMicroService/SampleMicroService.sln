@@ -9,9 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8991BD47-C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleMicroService.GateWay", "SampleMicroService.GateWay\SampleMicroService.GateWay.csproj", "{808057B5-488F-44CF-A706-587416CD96C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMicroService.OrderService", "SampleMicroService.OrderService\SampleMicroService.OrderService.csproj", "{8F06AA3F-9B2A-4D35-9BD0-0B4A439F4A29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleMicroService.OrderService", "SampleMicroService.OrderService\SampleMicroService.OrderService.csproj", "{8F06AA3F-9B2A-4D35-9BD0-0B4A439F4A29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMicroService.ProductService", "SampleMicroService.ProductService\SampleMicroService.ProductService.csproj", "{3B100A19-6319-44CA-A683-A60BD407FC4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleMicroService.ProductService", "SampleMicroService.ProductService\SampleMicroService.ProductService.csproj", "{3B100A19-6319-44CA-A683-A60BD407FC4F}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7C41156D-3833-4D01-9920-30A469B983F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMicroService.Infrastructure", "..\SampleMicroService.Infrastructure\SampleMicroService.Infrastructure.csproj", "{3EAD9620-C8C2-48E9-A100-93324DD8A6ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,14 @@ Global
 		{3B100A19-6319-44CA-A683-A60BD407FC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B100A19-6319-44CA-A683-A60BD407FC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B100A19-6319-44CA-A683-A60BD407FC4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C41156D-3833-4D01-9920-30A469B983F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C41156D-3833-4D01-9920-30A469B983F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C41156D-3833-4D01-9920-30A469B983F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C41156D-3833-4D01-9920-30A469B983F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EAD9620-C8C2-48E9-A100-93324DD8A6ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EAD9620-C8C2-48E9-A100-93324DD8A6ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EAD9620-C8C2-48E9-A100-93324DD8A6ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EAD9620-C8C2-48E9-A100-93324DD8A6ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +51,7 @@ Global
 		{808057B5-488F-44CF-A706-587416CD96C3} = {243C1B27-40C7-4A67-B338-4FCB8BF0F409}
 		{8F06AA3F-9B2A-4D35-9BD0-0B4A439F4A29} = {243C1B27-40C7-4A67-B338-4FCB8BF0F409}
 		{3B100A19-6319-44CA-A683-A60BD407FC4F} = {243C1B27-40C7-4A67-B338-4FCB8BF0F409}
+		{3EAD9620-C8C2-48E9-A100-93324DD8A6ED} = {243C1B27-40C7-4A67-B338-4FCB8BF0F409}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8D591506-D668-430E-9FAA-1EBFB15827CC}

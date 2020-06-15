@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Reflection;
+using SampleMicroService.Application;
 
 namespace SampleMicroService.OrderService
 {
@@ -26,6 +27,8 @@ namespace SampleMicroService.OrderService
             var serviceConfig = Configuration.GetServiceConfig();
             //Servisin consul'e kayýt olmasý için ayarlamalarý uyguluyoruz.
             services.RegisterConsulServices(serviceConfig);
+
+            services.AddApplication();
 
             services.AddControllers();
             services.AddHttpContextAccessor();

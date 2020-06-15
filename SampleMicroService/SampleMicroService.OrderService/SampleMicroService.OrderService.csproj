@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\SampleMicroService.Application\SampleMicroService.Application.csproj" />
     <ProjectReference Include="..\..\SampleMicroService.Infrastructure\SampleMicroService.Infrastructure.csproj" />
   </ItemGroup>
 
